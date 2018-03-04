@@ -1,79 +1,73 @@
 body{
 background-color: rgb(24, 22, 22);
+font-family: 'Montserrat',sans-serif;
 }
 
+/* tamaño y posición de la imagen*/
 .octo{
-  width: 160px;
-  margin-right: 60px;
+  width: 150px;
+  margin-right: 50px;
 }
 
-.caja1{
+/* caja donde se encuentra la imágen*/
+.cajaocto{
   margin-top: 250px;;
   display: flex;
-  align-self: center;
   align-items: center;
   justify-content: center;
 }
 
-.caja2{
-
+.cajagit{
+    margin-top: -30px;
 }
 
-.fnd{
+.progra{
   color: rgb(63, 64, 62);
   background: rgb(255, 255, 255);
-
-  font-size: 35px;
-  border-radius: 3px;
-  width: 160px;
+  font-size: 25px;
+  border-radius: 5px;
+  width: 190px;
   text-align: center;
+  font-weight: bold;
+  margin-bottom: 50px;
 }
 
-p{
- font-family: 'Montserrat', sans-serif;
+#bold{
+  font-weight: bold;
 }
-
+.txt1 , .txt2 , .button{
+  margin-top: -50px;
+}
 
 .txt1{
-  font-family: 'Montserrat', sans-serif;
-  font-size:25px;
+  font-size: 40px;
   color: rgb(255, 255, 255);
-
-
 }
 
 .txt2{
-  margin-top: -25px;;
-  font-family: 'Montserrat', sans-serif;
-    font-size: 50px;
+  font-size: 50px;
+  font-style: bolder;
   color: rgb(255, 255, 255);
-
+  margin-bottom: 20px;
 }
 
-.fnd2{
+
+/*configuración del botón*/
+.button{
   text-align: center;
   background: rgb(73, 207, 115);
-  border-radius: 6px;
+  border-radius: 8px;
   color: rgb(255, 255, 255);
-  font-size: 35px;
-  width: 200px;
-  box-shadow: rgb(28, 62, 40) 0px 5px;
-  margin-top: -33px;
+  font-size: 25px;
+  width: 160px;
+  box-shadow: rgb(28, 62, 40) 0px 3px;
   border: 0px;
 }
 
-.fnd2:hover{
+.button:hover{
   background-color: rgb(222, 81, 43);
 }
 
-.bold{
-  font-weight: bold;
-}
-
-.Mont{
-  font-family: 'Montserrat', sans-serif;
-}
-
-.caja3{
-    margin-top: -33px;
+.button:active{
+  background-color: rgb(51, 135, 245);
 }
