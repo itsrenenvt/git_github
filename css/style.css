@@ -1,10 +1,11 @@
 *{
   margin: 0px;
   padding: 0px;
+  font-family: 'Montserrat',sans-serif;
 }
+
 body{
 background-color: rgb(24, 22, 22);
-font-family: 'Montserrat',sans-serif;
 }
 
 /* tamaño y posición de la imagen*/
@@ -105,7 +106,7 @@ header{
   transition: all 500ms cubic-bezier(1,0,0,1);
   transition-timing-function: cubic-bezier(1,0,0,1);
   overflow: hidden;
-  border: 2px;
+  font-size: 15px;
 }
 
 .menu li{
@@ -116,27 +117,46 @@ header{
   transition: all 300ms;
   display: block;
   width: 400px;
-  text-align: left;
 }
 
 .menu li:hover{
   background: rgba(0, 0, 0, 0.5);
+  border-right-color: white;
 }
 
+#toggle{
+  margin-right: 10px;
+}
+/* etiqueta menú */
 label{
+  text-align: center;
   position: fixed;
-  width: 10%;
+  width: 8%;
+  height: 5%;
   top: 14px;
-  font-size: 15px;
+  font-size: 18px;
   text-align: left;
   color: white;
   cursor: pointer;
   z-index: 10;
   margin-left: 20px;
   margin-top: -4px;
-  border-color: red;
  }
 
+ label:hover{
+   font-size: 20px;
+ }
+
+ #start{
+   border-bottom: 2px;
+   border-bottom-color: white;
+ }
+
+ #down{
+   border-top: 2px;
+   border-top-color: white;
+ }
+/* etiqueta progra web*/
 .titlepw{
   list-style: none;
   position: fixed;
