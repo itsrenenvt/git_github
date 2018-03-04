@@ -1,3 +1,7 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
 body{
 background-color: rgb(24, 22, 22);
 font-family: 'Montserrat',sans-serif;
@@ -17,26 +21,22 @@ font-family: 'Montserrat',sans-serif;
   justify-content: center;
 }
 
-.cajagit{
-    margin-top: -30px;
-}
-
 .progra{
-  color: rgb(63, 64, 62);
+  color: rgb(40, 40, 40);
   background: rgb(255, 255, 255);
   font-size: 25px;
   border-radius: 5px;
   width: 190px;
   text-align: center;
   font-weight: bold;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 #bold{
   font-weight: bold;
 }
 .txt1 , .txt2 , .button{
-  margin-top: -50px;
+  margin-top: -10px;
 }
 
 .txt1{
@@ -70,4 +70,80 @@ font-family: 'Montserrat',sans-serif;
 
 .button:active{
   background-color: rgb(51, 135, 245);
+}
+
+/*configuración del header*/
+header{
+  width: 100%;
+  height: 40px;
+  position: top;
+  background: rgb(40, 40, 40);
+}
+
+#menutop{
+  border: 2px;
+  border-color: rgb(246, 246, 246);
+}
+
+#check{
+  display: none;
+}
+
+#check:checked ~ .menu{
+  width: 200px;
+  border-right-color: rgb(255, 255, 255);
+}
+
+.menu{
+  position: fixed;
+  top: 40px;
+  width: 0px;
+  height: 100vh;
+  background: rgb(40, 40, 40);
+  transition: all 500ms cubic-bezier(1,0,0,1);
+  transition-timing-function: cubic-bezier(1,0,0,1);
+  overflow: hidden;
+  border: 2px;
+}
+
+.menu li{
+  list-style: none;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  transition: all 300ms;
+  display: block;
+  width: 400px;
+  text-align: left;
+}
+
+.menu li:hover{
+  background: rgba(0, 0, 0, 0.5);
+}
+
+label{
+  position: fixed;
+  width: 10%;
+  top: 14px;
+  font-size: 15px;
+  text-align: left;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+  margin-left: 20px;
+  margin-top: -4px;
+  border-color: red;
+ }
+
+.titlepw{
+  list-style: none;
+  position: fixed;
+  width: 100%;
+  max-width: 1000px,
+  top: 14px;
+  font-size: 15px;
+  text-align: right;
+  color: white;
+  margin-top: -30px;
+  margin-left: -20px;
 }
