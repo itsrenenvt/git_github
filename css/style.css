@@ -261,6 +261,7 @@ a:active{
   text-decoration: none;
   color: rgb(73, 207, 115);
 }
+
 /*articulo*/
 .cajavideo{
   margin-top: 100px;
@@ -269,7 +270,6 @@ a:active{
   justify-content: center;
   text-align: center;
 }
-
 .vid{
   border-style: solid ;
   border-color: rgb(251, 254, 249);
