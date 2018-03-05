@@ -187,6 +187,10 @@ label{
    font-size: 20px;
  }
 
+ label:active{
+   color: rgb(73, 207, 115);
+ }
+
  #start{
    border-bottom: 2px;
    border-bottom-color: white;
