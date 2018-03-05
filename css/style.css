@@ -152,6 +152,7 @@ font-family: 'Montserrat',sans-serif;
   transition-timing-function: cubic-bezier(1,0,0,1);
   overflow: hidden;
   font-size: 15px;
+  /* padding-left: 10px; */
 }
 
 .menu li{
@@ -162,6 +163,11 @@ font-family: 'Montserrat',sans-serif;
   transition: all 300ms;
   display: block;
   width: 400px;
+  /* background-image: url(../img/git.svg);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: left;
+  padding-left: 35px; */
 }
 
 .menu li:hover{
