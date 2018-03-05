@@ -52,6 +52,16 @@ font-family: 'Montserrat',sans-serif;
   margin-bottom: 20px;
 }
 
+.txt3{
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 60px;
+}
+
+.txt4{
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+}
 
 /*configuración del botón*/
 .button{
@@ -190,4 +200,22 @@ a:visited{
 a:active{
   text-decoration: none;
   color: rgb(73, 207, 115);
+}
+
+.cajavideo {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.vid{
+  border-style: solid ;
+  border-color: rgb(251, 254, 249);
+  border-radius: 10px;
+  background-color:rgb(40, 40, 40);
+  width: 800px;
+  padding: 80px;
+>>>>>>> branch-luisgilberto
 }
