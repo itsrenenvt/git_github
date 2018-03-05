@@ -1,11 +1,11 @@
 *{
   margin: 0px;
   padding: 0px;
-  font-family: 'Montserrat',sans-serif;
 }
 
 body{
 background-color: rgb(24, 22, 22);
+font-family: 'Montserrat',sans-serif;
 }
 
 /* tamaño y posición de la imagen*/
@@ -132,7 +132,7 @@ header{
 label{
   text-align: center;
   position: fixed;
-  width: 7%;
+  width: 15%;
   height: 5%;
   top: 14px;
   font-size: 18px;
@@ -174,4 +174,20 @@ label{
 #gitlog{
   width: 30px;
   padding-top: 5px;
+}
+
+
+a:link{
+  text-decoration: none;
+  color: white;
+}
+
+a:visited{
+  text-decoration: none;
+  color: white;
+}
+
+a:active{
+  text-decoration: none;
+  color: rgb(73, 207, 115);
 }
