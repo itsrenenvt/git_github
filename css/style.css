@@ -89,6 +89,7 @@ font-family: 'Montserrat',sans-serif;
   box-shadow: rgb(28, 62, 40) 0px 3px;
   border: 0px;
   padding: 3px;
+  cursor: pointer;
 }
 
 .button:hover{
