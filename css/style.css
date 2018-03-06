@@ -293,7 +293,14 @@ a:active{
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 0px;
+}
+
+/*altera la posición del section*/
+.sep{
+  /* margin-top: 100px; */
+  display: block;
+  padding: 5px;
 }
 
 .boxes{
