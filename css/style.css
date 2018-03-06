@@ -52,7 +52,7 @@ font-family: 'Montserrat',sans-serif;
   margin-bottom: 16px;
 }
 
-.whogit_hub{
+.titleart{
   font-size: 40px;
   color: rgb(255, 255, 255);
   margin-top: 20px;
@@ -77,6 +77,13 @@ font-family: 'Montserrat',sans-serif;
   height: 14em;
   text-align: justify;
   margin: 10px;
+}
+
+.pnormal{
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+  text-align: justify;
 }
 
 /*configuración del botón*/
@@ -263,14 +270,16 @@ a:active{
 }
 
 /*articulo*/
-.cajavideo{
+.cajas{
   margin-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-bottom: -50px;
 }
-.vid{
+
+.boxes{
   border-style: solid ;
   border-color: rgb(251, 254, 249);
   border-radius: 10px;
