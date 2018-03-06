@@ -67,7 +67,7 @@ font-family: 'Montserrat',sans-serif;
 
 .wgit{
   border-style: solid;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 10px;
   border-color: white;
   float: left;
@@ -84,6 +84,24 @@ font-family: 'Montserrat',sans-serif;
   font-size: 15px;
   color: white;
   text-align: justify;
+}
+
+.concluye{
+  padding: 10px;
+  margin-bottom: -20px;
+  font-size: 20px;
+  color: white;
+  text-align: left;
+}
+.conc{
+  margin: 15px 20px 30px 20px;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: white;
+}
+
+section{
+
 }
 
 /*configuración del botón*/
