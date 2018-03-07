@@ -445,7 +445,7 @@ a:active{
 }
 
 .bg{
-  background: url("../img/lgo.png");
+  /* background: url("../img/lgo.png"); */
   background-size: cover;
   background-repeat:no-repeat;
   background-attachment: fixed;
