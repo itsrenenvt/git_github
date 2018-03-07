@@ -387,3 +387,16 @@ a:active{
 
 
 }
+
+
+.bg2{
+  background: url("../img/bg02.png");
+  background-color: #1FB099;
+  background-size: cover;
+  background-repeat:no-repeat;
+
+  background-attachment: fixed;
+
+
+
+}
