@@ -383,3 +383,45 @@ a:active{
   width: 922px;
   padding: 10px;
 }
+
+.bg{
+  background: url("../img/lgo.png");
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+}
+.bg1{
+  background-color: #3A90D1;
+}
+
+.bg2{
+  background-color: #0B416B;
+}
+
+.bg3{
+  background-color: #4B0E0C;
+}
+
+.bg4{
+  background-color: #CA413C;
+}
+
+
+.bg5{
+  background-color: #FEC1A2;
+}
+
+
+.bg6{
+  background-color: #FFF7CB;
+}
+
+.bg7{
+  background-color: #FEC1A2;
+}
+
+.bg1o{
+
+    background-color: rgba(33, 79, 113, 0.86);
+
+}
