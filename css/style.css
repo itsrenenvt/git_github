@@ -104,6 +104,36 @@ font-family: 'Montserrat',sans-serif;
   font-family: courier;
 }
 
+#imgdownload{
+  display: inline-block;
+  margin: 15px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  background-color: rgba(0, 0, 0,0.5);
+}
+
+.descargas{
+  text-align: center;
+  align-content: center;
+}
+
+.linux{
+  padding-top: 30px;
+}
+
+
+#imgdownload img{
+  width: 150px;
+}
+
+#imgdownload a{
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .codigogo{
   margin: 15px 14em 30px 14em;
   padding: 15px 0px 15px 25px;
