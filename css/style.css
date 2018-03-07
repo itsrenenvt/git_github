@@ -86,6 +86,36 @@ font-family: 'Montserrat',sans-serif;
   text-align: justify;
 }
 
+.viñetado{
+  text-align: justify;
+  padding: 0px 40px 0px 40px;
+  color: white;
+  font-size: 15px;
+}
+
+.codigo{
+  margin: 15px 14em 30px 14em;
+  padding: 15px 0px 15px 0px;
+  color: white;
+  border-style: solid; /*dotted; */
+  border-radius: 20px;
+  border-color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: courier;
+}
+
+.codigogo{
+  margin: 15px 14em 30px 14em;
+  padding: 15px 0px 15px 25px;
+  color: white;
+  border-style: solid; /*dotted; */
+  border-radius: 20px;
+  border-color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: courier;
+  text-align: left;
+}
+
 .concluye{
   padding: 10px;
   margin-bottom: -20px;
@@ -98,6 +128,9 @@ font-family: 'Montserrat',sans-serif;
   border-style: solid;
   border-radius: 20px;
   border-color: white;
+}
+.imgcode{
+  width: 50em;
 }
 
 section{

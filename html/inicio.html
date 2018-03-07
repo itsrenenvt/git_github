@@ -17,8 +17,8 @@
         <li><a href="#inicio">INICIO</a></li>
         <li><a href="#gitconfig">GIT CONFIG</a></li>
         <li><a href="#gitinit">GIT INIT</a></li>
-        <li><a href="#gitcheckout">GIT CHECKOUT</a></li>
         <li><a href="#gitclone">GIT CLONE</a></li>
+        <li><a href="#gitbranch">GIT BRANCH</a></li>
         <li><a href="#gitstatus">GIT STATUS</a></li>
         <li><a href="#gitadd">GIT ADD</a></li>
         <li><a href="#gitcommit">GIT COMMIT</a></li>
@@ -69,11 +69,55 @@
          <div class="boxes">
            <h2 class="titleart">GIT CONFIG</h2>
 
-           <p class="pnormal">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+           <p class="pnormal">Git trae una herramienta llamada <strong>git config</strong> que te permite obtener y establecer variables de configuración,
+             que controlan el aspecto y funcionamiento de Git. Estas variables pueden almacenarse en <strong>tres sitios distintos:</strong><br>
+             <ul class="viñetado">
+             <li><strong>Archivo /etc/gitconfig:</strong> Contiene valores para todos los usuarios del sistema y todos sus repositorios. Si pasas la opción --system a git config, lee y escribe específicamente en este archivo.</li>
+             <br>
+             <li><strong>Archivo ~/.gitconfig file:</strong> Específico a tu usuario. Puedes hacer que Git lea y escriba específicamente en este archivo pasando la opción <strong>--global.</strong></li>
+             <br>
+             <li><strong>Archivo config en el directorio de Git (es decir, .git/config) del repositorio que estés utilizando actualmente:</strong> Específico a ese repositorio. Cada nivel sobrescribe los valores del nivel anterior, por lo que los valores de .git/config tienen preferencia sobre los de /etc/gitconfig.</li>
+             </ul>
+             <br>
+             <p class="pnormal">Esto es importante porque las confirmaciones de cambios (commits) en Git usan esta información, y es introducida de manera inmutable en los commits que envías.</p>
+             <br>
+             <h3 class="concluye">Identidad</h3>
+             <p class="pnormal">
+               Lo primero que se debe hacer cuando se instala Git es establecer nuestro nombre de usuario por medio del comando:
+               <div class="codigo">
+                 <strong>git config --global user.name "nombreusuario"</strong>
+               </div>
+               <img src="../img/placebo.jpg" alt="" class="imgcode">
+            </p>
+            <br>
+            <h3 class="concluye">E-mail</h3>
+            <p class="pnormal">
+              Otro parametro importante que se debe configurar en Git es nuestra direcci&oacute;n de correo electr&oacute;nico.:
+              <div class="codigo">
+                <strong>git config --global user.email email@email.com</strong>
+              </div>
+              <img src="../img/placebo.jpg" alt="" class="imgcode">
            </p>
+           <br>
+           <h3 class="concluye">Editor</h3>
+           <p class="pnormal">
+             Ahora que tu identidad está configurada, puedes elegir el editor de texto por defecto que se utilizará cuando Git necesite que introduzcas un mensaje.
+             Si no indicas nada, Git usa el editor por defecto de tu sistema.
+             <div class="codigo">
+               <strong>git config --global core.editor editor</strong>
+             </div>
+             <img src="../img/placebo.jpg" alt="" class="imgcode">
+          </p>
+          <br>
+          <h3 class="concluye">Comprobando cambios</h3>
+          <p class="pnormal">
+            Si quieres comprobar tu configuración, puedes usar el siguiente comando para listar todas las propiedades que Git ha configurado:
+            <div class="codigo">
+              <strong>git config --list</strong>
+            </div>
+            <img src="../img/placebo.jpg" alt="" class="imgcode">
+         </p>
+         </p>
          </div>
      </article>
      </section>
@@ -83,27 +127,25 @@
        <article class="cajas">
          <div class="boxes">
            <h2 class="titleart">GIT INIT</h2>
-
-           <p class="pnormal">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-           </p>
-         </div>
-     </article>
-     </section>
-
-     <section id="gitcheckout">
-       <div class="sep"></div>
-       <article class="cajas">
-         <div class="boxes">
-           <h2 class="titleart">GIT CHECKOUT</h2>
-
-           <p class="pnormal">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-           </p>
+           <p class="pnormal">Puedes obtener un proyecto Git de <strong>dos maneras.</strong>
+             <br>
+             <ul class="viñetado">
+             <li><strong>La primera: </strong>Tomar un proyecto o directorio existente e incializarlo como un repositorio de Git.</li>
+             <br>
+             <li><strong>La segunda: </strong>Clonar un repositorio Git existente desde otro servidor (GitHub).</li>
+             </ul>
+             <br>
+             <h3 class="concluye">Inicializar un repositorio.</h3>
+             <p class="pnormal">
+               Si estás empezando el seguimiento en Git de un proyecto existente, necesitas ir al directorio del proyecto y escribir:
+               <div class="codigo">
+                 <strong>git init [url]</strong>
+               </div>
+               <img src="../img/placebo.jpg" alt="" class="imgcode">
+            </p>
+            <p class="pnormal">Esto crea un nuevo subdirectorio llamado <strong>.git</strong> que contiene todos los archivos necesarios
+              del repositorio un esqueleto de un repositorio Git.Todavía no hay nada en tu proyecto que esté bajo seguimiento.</p>
+          </p>
          </div>
      </article>
      </section>
@@ -113,15 +155,101 @@
        <article class="cajas">
          <div class="boxes">
            <h2 class="titleart">GIT CLONE</h2>
+             <!-- <br> -->
+             <h3 class="concluye">Clonando un repositorio existente.</h3>
+             <p class="pnormal">
+               Si deseas obtener una copia de un repositorio Git existente por ejemplo, un proyecto en el que te gustaría contribuir
+               el comando que necesitas es:
+               <div class="codigo">
+                 <strong>git clone [url]</strong>
+               </div>
+               <img src="../img/placebo.jpg" alt="" class="imgcode">
+            </p>
+            <p class="pnormal">Git recibe una copia de casi todos los datos que tiene el servidor.
+              Cada versión de cada archivo de la historia del proyecto es descargado cuando ejecutas git clone.
+              En su interior, descarga toda la información del repositorio clonado, y saca una copia de trabajo de la última versión.
+              Si te metes en el directorio creado, verás que están los archivos del proyecto, listos para ser utilizados.
+              Si quieres clonar el repositorio a un directorio con otro nombre que no sea el que tiene por defecto, puedes especificarlo con la siguiente opción de línea de comandos:
+            </p>
+            <div class="codigo">
+              <strong>git clone [url] minombre</strong>
+            </div>
 
-           <p class="pnormal">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-           </p>
+          </p>
          </div>
      </article>
      </section>
+
+          <section id="gitbranch">
+            <div class="sep"></div>
+            <article class="cajas">
+              <div class="boxes">
+                <h2 class="titleart">GIT BRANCH</h2>
+                <!-- <br> -->
+                <h3 class="concluye">¿Qu&eacute; es una rama?</h3>
+                <p class="pnormal">
+                  Una rama Git es simplemente un apuntador móvil apuntando a una confirmacion (commit).
+                  La rama por defecto de Git es la rama <strong>master</strong>. Con la primera confirmación de cambios que realicemos, se creará esta rama
+                  principal <strong>master</strong> apuntando a dicha confirmación. En cada confirmación de cambios que realicemos, la rama irá avanzando
+                  automáticamente. Y la rama <strong>master</strong> apuntará siempre a la última confirmación realizada.
+               </p>
+               <br>
+               <h3 class="concluye">¿C&oacute;mo crear una nueva rama?</h3>
+                <p class="pnormal">
+                  Supongamos que estamos trabajando en un proyecto y queremos añadir nueva funcionalidad al mismo.
+                  La forma adecuada de hacerlo con Git es crear una nueva rama con el nombre de la nueva funcionalidad donde
+                  añadiremos nuestros cambios y después cambiaremos a ella. Al crear una nueva rama simplemente se crea un nuevo
+                  apuntador para que lo puedas mover libremente. Por ejemplo, si quieres crear una nueva rama. Usarás el comando:
+                </p>
+                <div class="codigo">
+                 <strong>git branch [nombre]</strong>
+                </div>
+                <img src="../img/placebo.jpg" alt="" class="imgcode">
+
+                <br>
+                <h3 class="concluye">¿C&oacute;mo cambiar entre ramas?</h3>
+                 <p class="pnormal">
+                   Para saltar de una rama a otra, tienes que utilizar el comando:
+                 </p>
+                 <div class="codigo">
+                  <strong>git checkout [nombrerama]</strong>
+                 </div>
+                 <img src="../img/placebo.jpg" alt="" class="imgcode">
+
+                 <br>
+                 <h3 class="concluye">¿C&oacute;mo ver todas las ramas?</h3>
+                  <p class="pnormal">
+                    Para ver todas las ramas existentes dentro de nuestro repositorio basta con ejecutar el siguiente comando:
+                  </p>
+                  <div class="codigo">
+                   <strong>git branch -a</strong>
+                  </div>
+                  <img src="../img/placebo.jpg" alt="" class="imgcode">
+
+                  <br>
+                  <h3 class="concluye">¿C&oacute;mo eliminar una rama?</h3>
+                   <p class="pnormal">
+                     Cuando mezclamos las ramas con las que estamos trabajando, y en caso de que no haya conflictos,
+                     podemos eliminar la rama que hayamos creado para realizar nuestros cambios por que no vamos a necesitarla más, con el siguiente comando:
+                   </p>
+                   <div class="codigo">
+                    <strong>git branch -d [nombrerama]</strong>
+                   </div>
+                   <img src="../img/placebo.jpg" alt="" class="imgcode">
+
+                  <br>
+                  <h3 class="concluye">Atajos</h3>
+                   <p class="pnormal">
+                     Existe un atajo para crear una rama que aún no existe y posicionarnos en ella rapidamente usando directamente el comando <strong>checkout</strong>
+                     que consiste en pasar el parámetro <strong>-b</strong> en la llamada.
+                   </p>
+                   <div class="codigo">
+                    <strong>git checkout -b [nombrerama]</strong>
+                   </div>
+                   <img src="../img/placebo.jpg" alt="" class="imgcode">
+              </div>
+          </article>
+          </section>
 
      <section id="gitstatus">
        <div class="sep"></div>
@@ -129,11 +257,31 @@
          <div class="boxes">
            <h2 class="titleart">GIT STATUS</h2>
 
-           <p class="pnormal">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-           </p>
+           <h3 class="concluye">Comprobar el estado de los archivos.</h3>
+           <p class="pnormal">
+             La herramienta para determinar qué archivos están y en qué estado es el comando:
+             <div class="codigo">
+               <strong>git status</strong>
+             </div>
+             <!-- <img src="../img/placebo.jpg" alt="" class="imgcode"> -->
+          </p>
+          <p class="pnormal">Si ejecutas este comando justo después de clonar un repositorio, deberías ver algo así:</p>
+          <div class="codigogo">
+            <strong>on branch [rama] <br>
+              nothing to commit, working directory clean
+            </strong>
+          </div>
+          <p class="pnormal">Esto significa que tienes un directorio de trabajo limpio, en otras palabras, no tienes archivos bajo seguimiento y
+            modificados. Git tampoco ve ningún archivo que no esté bajo seguimiento, o estaría listado ahí. Por último, el comando te dice en qué rama estás.
+          </p>
+          <br>
+
+          <h3 class="concluye">Creando archivos o cambios.</h3>
+          <p class="pnormal">Digamos que añades un nuevo archivo a tu proyecto, un sencillo archivo.
+            Si el archivo no existía y ejecutas <strong>git status</strong>, verás tus archivos sin seguimiento así:
+          </p>
+          <img src="../img/placebo.jpg" alt="" class="imgcode">
+        </p>
          </div>
      </article>
      </section>
@@ -144,11 +292,27 @@
          <div class="boxes">
            <h2 class="titleart">GIT ADD</h2>
 
-           <p class="pnormal">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-           </p>
+           <h3 class="concluye">Clonando un repositorio existente.</h3>
+           <p class="pnormal">
+             Para empezar el seguimiento o añadir un nuevo archivo o los cambios generados dentro de este, se usa el comando:
+             <div class="codigo">
+               <strong>git add [nombrearchivo]</strong>
+             </div>
+             <img src="../img/placebo.jpg" alt="" class="imgcode">
+             <br>
+             <p class="pnormal">
+               Si queremos agregar todos los cambios generados en solo una petición, se pueden utilizar los siguientes comandos:
+               <div class="codigo">
+                 <strong>git add --all <br>
+                 git add --a </strong>
+               </div>
+               <img src="../img/placebo.jpg" alt="" class="imgcode">
+          </p>
+          <p class="pnormal">
+            Si se vuelve a ejecutar el comando <strong>git status</strong>, verás que tus archivos estan ahora bajo seguimiento y preparados.
+          </p>
+          <img src="../img/placebo.jpg" alt="" class="imgcode">
+        </p>
          </div>
      </article>
      </section>
@@ -159,11 +323,19 @@
          <div class="boxes">
            <h2 class="titleart">GIT COMMIT</h2>
 
-           <p class="pnormal">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-           </p>
+           <h3 class="concluye">Confirmando cambios.</h3>
+           <p class="pnormal">
+             Para confirmar o guardar los cambios hechos en nuestro repositorio se utiliza el comando:
+             <div class="codigo">
+               <strong>git commit -m [mensaje]</strong>
+             </div>
+             <img src="../img/placebo.jpg" alt="" class="imgcode">
+          </p>
+          <p class="pnormal">
+            El parameto <strong>-m</strong> indica que con el <strong>commit</strong> se envia un mensaje, es recomendable agregar uno, para que
+            otro participante en el proyecto sepa de antemano que cambios fuerón generados. Si ejecutamos <strong>git status</strong> podremos
+            observar que los cambios han sido guardados.
+          </p>
          </div>
      </article>
      </section>
@@ -174,11 +346,47 @@
          <div class="boxes">
            <h2 class="titleart">GIT PUSH</h2>
 
-           <p class="pnormal">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-           </p>
+           <h3 class="concluye">Trabajando con repositorios remotos.</h3>
+           <p class="pnormal">
+             Para poder colaborar en cualquier proyecto Git, necesitas saber cómo gestionar tus repositorios remotos.
+             Los repositorios remotos son versiones de tu proyecto que se encuentran alojados en Internet o en algún punto de la red.
+             Puedes tener varios, cada uno de los cuales puede ser de sólo lectura, o de lectura/escritura, según los permisos que tengas.
+             Colaborar con otros implica gestionar estos repositorios remotos, y mandar <strong>(push)</strong> y recibir <strong>(pull)</strong> datos de ellos cuando
+             necesites compartir cosas.
+          </p>
+
+          <h3 class="concluye">Añadir repositorios remotos.</h3>
+          <p class="pnormal">
+            Si quieres añadir tu repositorio local a un repositorio remoto alojado en los servidores de <strong>GitHub</strong> ejecuta el siguiente comando:
+          </p>
+          <div class="codigo">
+            <strong>git remote add origin [urlservidor]</strong>
+          </div>
+          <img src="../img/placebo.jpg" alt="" class="imgcode">
+
+          <p class="pnormal">
+            Para añadir un nuevo repositorio Git remoto, asignándole un nombre con el que referenciarlo fácilmente, ejecuta:</p>
+          <div class="codigo">
+            <strong>git remote add origin [nombre] [urlservidor]</strong>
+          </div>
+
+          <h3 class="concluye">Enviando al repositorio remoto.</h3>
+          <p class="pnormal">
+            Cuando tu proyecto se encuentra en un estado que quieres compartir, tienes que enviarlo a un repositorio remoto.
+            El comando que te permite hacer esto es sencillo:
+          </p>
+          <div class="codigo">
+            <strong> git push [nombre-remoto][nombre-rama]</strong>
+          </div>
+
+          <p class="pnormal">
+            Si quieres enviar a cualquier rama pero a tu servidor origen (origin), ejecutarías esto para enviar tu trabajo al servidor:
+          </p>
+          <div class="codigo">
+            <strong> git push origin [rama]</strong>
+          </div>
+          <img src="../img/placebo.jpg" alt="" class="imgcode">
+        </p>
          </div>
      </article>
      </section>
@@ -189,11 +397,19 @@
          <div class="boxes">
            <h2 class="titleart">GIT FETCH</h2>
 
-           <p class="pnormal">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-           </p>
+           <h3 class="concluye">Actualizando repositorio local con remoto.</h3>
+           <p class="pnormal">
+             Para recuperar datos de tus repositorios remotos puedes ejecutar
+             <div class="codigo">
+               <strong>git fetch</strong>
+             </div>
+             <img src="../img/placebo.jpg" alt="" class="imgcode">
+          </p>
+          <p class="pnormal">Este comando recupera todos los datos del proyecto remoto que no tengas todavía.
+            Después de hacer esto, deberías tener referencias a todas las ramas del repositorio remoto, que puedes
+            unir o inspeccionar en cualquier momento.
+          </p>
+        </p>
          </div>
      </article>
      </section>
@@ -204,11 +420,19 @@
          <div class="boxes">
            <h2 class="titleart">GIT PULL</h2>
 
-           <p class="pnormal">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-           </p>
+           <h3 class="concluye">Actualizar y fusionar los cambios remotos.</h3>
+           <p class="pnormal">
+             Para recuperar y unir automáticamente la rama remota con tu rama actual al <strong>commit</strong> m&acute;s nuevo, utiliza el siguiente comando.
+             <div class="codigo">
+               <strong>git pull</strong>
+             </div>
+             <img src="../img/placebo.jpg" alt="" class="imgcode">
+          </p>
+          <p class="pnormal">
+             Recupera la información del servidor del que clonaste, y automáticamente se intenta unir con el código con el
+             que estás trabajando actualmente.
+          </p>
+        </p>
          </div>
      </article>
      </section>
@@ -219,11 +443,33 @@
          <div class="boxes">
            <h2 class="titleart">GIT MERGE</h2>
 
-           <p class="pnormal">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+           <h3 class="concluye">Mezclando ramas.</h3>
+           <p class="pnormal">
+             Si la parte del trabajo o el trabajo como tal ya esta terminado y desear unir los cambios de una rama con otra puedes fusionar los cambios de una rama con otra.
+             Para fusionar una rama o m&aacute; con la rama que se tiene activa, se utiliza el comando:
+             <div class="codigo">
+               <strong>git merge [rama]</strong>
+             </div>
+             <img src="../img/placebo.jpg" alt="" class="imgcode">
+          </p>
+          <p class="pnormal">Si los cambios de una rama con otra han sido fusionados,
+            la o las ramas que ya no se vayan a ocupar pueden ser eliminadas.</p>
+
+            <h3 class="concluye">Deshacer un Merge.</h3>
+            <p class="pnormal">
+              En ocasiones, queremos deshacer un <strong>merge</strong> por que nos equivocamos o otra gente de nuestro equipo de trabajo se equivoco
+              y encontraremos muchos conflictos a la hora de intentar seguir mezclando ramas o de trabajar normalmente. En esas ocasiones
+              querremos deshacer de forma total el problema. Git viene nos facilita el comando <strong>reset</strong>. Para hacer un reset
+              de nuestro directorio de trabajo y volver atrás hasta antes de intentar mezclar las ramas, solamente debemos de ejecutar <strong>git reset</strong>.
+              <div class="codigo">
+                <strong>git reset --hard HEAD</strong>
+              </div>
+              <img src="../img/placebo.jpg" alt="" class="imgcode">
            </p>
+           <p class="pnormal">El parámetro <strong>--hard</strong>se asegura de que tanto nuestro índice de archivos como el directorio de trabajo
+             cambien para que coincidan con lo que era antes del merge. Por defecto solo se restablece el índice, dejando los archivos
+             parcialmente mezclados en el directorio de trabajo.</p>
+        </p>
          </div>
      </article>
      </section>
