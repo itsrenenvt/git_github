@@ -5,7 +5,17 @@
 
 body{
 background-color: rgb(24, 22, 22);
+background: url("../img/bg02.png");
+  background-color: #3A90D1;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+
 font-family: 'Montserrat',sans-serif;
+}
+
+.bn{
+  background-color: rgb(24, 22, 22);
 }
 
 /* tamaño y posición de la imagen*/
@@ -123,6 +133,13 @@ font-family: 'Montserrat',sans-serif;
   padding-top: 30px;
 }
 
+.imgalumno{
+  width: 70px;
+  display: inline-block;
+  border-radius: 5px;
+  float: left;
+  margin: 20px 20px 10px 20px;
+}
 
 #imgdownload img{
   width: 150px;
@@ -158,6 +175,7 @@ font-family: 'Montserrat',sans-serif;
   border-style: solid;
   border-radius: 20px;
   border-color: white;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .imgcode{
   width: 50em;
@@ -373,30 +391,54 @@ a:active{
   background-color:rgb(40, 40, 40);
   width: 922px;
   padding: 10px;
+  margin-bottom: 100px;
 }
 
-
-.bg1{
-  background: url("../img/bg01.png");
-  background-color: #F0A182;
+.bg{
+  background: url("../img/lgo.png");
   background-size: cover;
   background-repeat:no-repeat;
-
   background-attachment: fixed;
-
-
-
 }
 
+.bgv{
+  background: url("../img/bg02.png");
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+}
+.bg1{
+  background-color: #3A90D1;
+}
 
 .bg2{
-  background: url("../img/bg02.png");
-  background-color: #1FB099;
-  background-size: cover;
-  background-repeat:no-repeat;
+  background-color: #0B416B;
+}
 
-  background-attachment: fixed;
+.bg3{
+  background-color: #4B0E0C;
+}
+
+.bg4{
+  background-color: #CA413C;
+}
 
 
+.bg5{
+  background-color: #FEC1A2;
+}
+
+
+.bg6{
+  background-color: #FFF7CB;
+}
+
+.bg7{
+  background-color: #FEC1A2;
+}
+
+.bg1o{
+
+    background-color: rgba(33, 79, 113, 0.86);
 
 }
