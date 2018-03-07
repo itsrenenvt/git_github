@@ -374,3 +374,16 @@ a:active{
   width: 922px;
   padding: 10px;
 }
+
+
+.bg1{
+  background: url("../img/bg01.png");
+  background-color: #F0A182;
+  background-size: cover;
+  background-repeat:no-repeat;
+
+  background-attachment: fixed;
+
+
+
+}
